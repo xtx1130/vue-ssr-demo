@@ -27,7 +27,6 @@ app.use(async (ctx, next) => {
   let filename = ctx.url.split('/').pop().split('?')[0]
   if(/\.js/.test(ctx.url)) {
     ctx.set('content-type', 'application/x-javascript')
-    console.log(path.join(process.cwd(), './dist/index/', filename))
     ctx.body = fs.createReadStream(path.join(process.cwd(), './dist/index/', filename))
   } else if(/\.jpg/.test(ctx.url)) {
     ctx.set('content-type', 'image/jpeg')

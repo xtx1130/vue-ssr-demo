@@ -59,12 +59,8 @@ export default {
     },
     methods: {
         fetchVideoData: async function() {
-            // let res = await fetch('/mo/q/pb/page?kz=5866442128&fr=smallapp') 
-            // return res.data.data
         },
         init: async function() {
-            // let data = await this.fetchVideoData()
-            // let videoInfo = data.video_info
             this.videoSrc = this.videoList[this.videoIndex]
             this.videoPoster = './static/poster.jpg'
             this.fullTime = this.formatTime(127)
